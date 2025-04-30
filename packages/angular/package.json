@@ -42,8 +42,63 @@
     "validate": "npm i && npm run lint && npm run test && npm run build"
   },
   "exports": {
-    "./css/*": {
-      "style": "./css/*"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "esm2022": "./dist/fesm2022/ionic-angular.mjs",
+      "esm": "./dist/fesm2022/ionic-angular.mjs",
+      "default": "./dist/fesm2022/ionic-angular.mjs"
+    },
+    "./css/core.css": "./css/core.css",
+    "./css/normalize.css": "./css/normalize.css",
+    "./css/structure.css": "./css/structure.css",
+    "./css/typography.css": "./css/typography.css",
+    "./css/padding.css": "./css/padding.css",
+    "./css/float-elements.css": "./css/float-elements.css",
+    "./css/text-alignment.css": "./css/text-alignment.css",
+    "./css/text-transformation.css": "./css/text-transformation.css",
+    "./css/flex-utils.css": "./css/flex-utils.css",
+    "./css/display.css": "./css/display.css",
+    "./css/*": "./css/*",
+    "./common": {
+      "types": "./dist/common/index.d.ts",
+      "esm2022": "./dist/fesm2022/ionic-angular-common.mjs",
+      "esm": "./dist/fesm2022/ionic-angular-common.mjs",
+      "default": "./dist/fesm2022/ionic-angular-common.mjs"
+    },
+    "./common/*": {
+      "types": "./dist/common/*.d.ts",
+      "esm2022": "./dist/fesm2022/ionic-angular-common.mjs",
+      "esm": "./dist/fesm2022/ionic-angular-common.mjs",
+      "default": "./dist/fesm2022/ionic-angular-common.mjs"
+    },
+    "./standalone": {
+      "types": "./dist/standalone/index.d.ts",
+      "esm2022": "./dist/fesm2022/ionic-angular-standalone.mjs",
+      "esm": "./dist/fesm2022/ionic-angular-standalone.mjs",
+      "default": "./dist/fesm2022/ionic-angular-standalone.mjs"
+    },
+    "./standalone/*": {
+      "types": "./dist/standalone/*.d.ts",
+      "esm2022": "./dist/fesm2022/ionic-angular-standalone.mjs",
+      "esm": "./dist/fesm2022/ionic-angular-standalone.mjs",
+      "default": "./dist/fesm2022/ionic-angular-standalone.mjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "common": [
+        "./dist/common/index.d.ts"
+      ],
+      "common/*": [
+        "./dist/common/*.d.ts"
+      ],
+      "standalone": [
+        "./dist/standalone/index.d.ts"
+      ],
+      "standalone/*": [
+        "./dist/standalone/*.d.ts"
+      ]
     }
   },
   "dependencies": {
